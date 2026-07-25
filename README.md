@@ -139,7 +139,7 @@ Displays:
 
 ## 📸 Screenshots
 
-Add screenshots of:
+Added screenshots of:
 
 - Dashboard
 - Cashier Detection

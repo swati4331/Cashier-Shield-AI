@@ -139,12 +139,21 @@ Displays:
 
 ## 📸 Screenshots
 
-Added screenshots of:
+### Dashboard
 
-- Dashboard
-- Cashier Detection
-- Online Detection
-- Reports
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Cashier Fraud Detection
+
+![Cashier Detection](screenshots/cashier_detection.png)
+
+---
+
+### Online Fraud Detection
+
+![Online Detection](screenshots/online_detection.png)
 
 ---
 

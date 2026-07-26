@@ -13,7 +13,10 @@ from .cards import DashboardCard
 from .console import ActivityConsole
 from .statusbar import StatusBar
 from .graph_frame import GraphFrame
-
+from .pages.reports_page import ReportsPage
+from .pages.search_page import SearchPage
+from .pages.graphs_page import GraphsPage
+from .pages.about_page import AboutPage
 from controllers.detection_controller import DetectionController
 
 from cashier_model import (
@@ -269,6 +272,22 @@ class DashboardApp(ctk.CTk):
     # =====================================================
 
     def show_dashboard(self):
+        for page in [
+        "report_page",
+        "search_page",
+        "graph_page",
+        "about_page"
+    ]:
+
+            if hasattr(self, page):
+                getattr(self, page).destroy()
+                delattr(self, page)
+        
+        self.topbar.grid()
+        self.card_frame.grid()
+        self.graph_frame.grid()
+        self.console.grid()
+        self.status.grid()
         self.console.log("Dashboard opened.")
         self.status.set_ready()
 
@@ -303,9 +322,7 @@ class DashboardApp(ctk.CTk):
 
 
     def online_detection(self):
-        print("ONLINE BUTTON CLICKED")
-        self.console.log("ONLINE BUTTON CLICKED")
-
+        
         try:
             self.status.set_running()
             self.console.log("Loading Online Fraud Detection...")
@@ -337,18 +354,94 @@ class DashboardApp(ctk.CTk):
 
 
     def view_reports(self):
-        self.console.log("Reports module is under development.")
+        self.topbar.grid_remove()
+        self.card_frame.grid_remove()
+        self.graph_frame.grid_remove()
+        self.console.grid_remove()
+        self.status.grid_remove()
+        self.report_page = ReportsPage(self.main)
+        self.report_page.grid(
+            row=0,
+            column=0,
+            rowspan=5,
+            sticky="nsew",
+            padx=10,
+            pady=10
+            )
 
 
     def search_transaction(self):
-        self.console.log("Search module is under development.")
+
+        self.topbar.grid_remove()
+        self.card_frame.grid_remove()
+        self.graph_frame.grid_remove()
+        self.console.grid_remove()
+        self.status.grid_remove()
+
+        if hasattr(self, "report_page"):
+            self.report_page.destroy()
+
+        if hasattr(self, "graph_page"):
+            self.graph_page.destroy()
+
+        if hasattr(self, "about_page"):
+            self.about_page.destroy()
+
+        self.search_page = SearchPage(self.main)
+
+        self.search_page.grid(
+            row=0,
+            column=0,
+            rowspan=5,
+            sticky="nsew"
+        )
 
 
     def view_graph(self):
-        self.console.log("Graph already displayed on dashboard.")
+        self.topbar.grid_remove()
+        self.card_frame.grid_remove()
+        self.graph_frame.grid_remove()
+        self.console.grid_remove()
+        self.status.grid_remove()
+        for page in [
+            "report_page",
+            "search_page",
+            "about_page"
+        ]:
+                if hasattr(self, page):
+                    getattr(self, page).destroy()
+
+        self.graph_page = GraphsPage(self.main)
+        self.graph_page.grid(
+            row=0,
+            column=0,
+            rowspan=5,
+            sticky="nsew"
+        )
 
 
     def show_about(self):
-        self.console.log("Cashier Shield AI")
-        self.console.log("Version 1.0")
-        self.console.log("Developed by Shubhashree Bhat")
+
+        self.topbar.grid_remove()
+        self.card_frame.grid_remove()
+        self.graph_frame.grid_remove()
+        self.console.grid_remove()
+        self.status.grid_remove()
+
+        for page in [
+            "report_page",
+            "search_page",
+            "graph_page"
+        ]:
+
+            if hasattr(self, page):
+                getattr(self, page).destroy()
+
+        self.about_page = AboutPage(self.main)
+
+        self.about_page.grid(
+            row=0,
+            column=0,
+            rowspan=5,
+            sticky="nsew"
+        )

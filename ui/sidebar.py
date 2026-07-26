@@ -77,9 +77,9 @@ class Sidebar(ctk.CTkFrame):
         self.create_button("💰 Cashier Fraud", self.app.cashier_detection)
         self.create_button("🌐 Online Fraud", self.app.online_detection)
         self.create_button("📊 Reports", self.app.view_reports)
-        #self.create_button("🔍 Search", self.app.search_transaction)
-        #self.create_button("📈 Graphs", self.app.view_graph)
-        #self.create_button("ℹ About", self.app.show_about)
+        self.create_button("🔍 Search", self.app.search_transaction)
+        self.create_button("📈 Graphs", self.app.view_graph)
+        self.create_button("ℹ About", self.app.show_about)
 
         ctk.CTkButton(
             self,

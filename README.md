@@ -1,98 +1,167 @@
 # 🛡️ Cashier Shield AI
 
-An AI-powered desktop application for detecting fraudulent transactions in retail systems using Machine Learning.
-
-The project provides two fraud detection modules:
-
-- 💰 Cashier Fraud Detection (Isolation Forest)
-- 🌐 Online Fraud Detection (Random Forest)
-
-It includes a professional dashboard, graphical analytics, transaction summaries, and fraud reports.
+> An AI-powered desktop application for detecting fraudulent cashier and online transactions using Machine Learning.
 
 ---
 
-## 📌 Features
+## 📌 Overview
 
-- Dashboard with live statistics
-- Cashier Fraud Detection
-- Online Fraud Detection
-- Transaction Summary
-- Fraud Reports
-- Graphical Analysis
-- Activity Console
-- Status Monitoring
-- Modular MVC Architecture
-- Machine Learning Models
+Cashier Shield AI is a desktop application developed using **Python**, **CustomTkinter**, and **Machine Learning** to identify suspicious transactions.
+
+The system provides an intuitive dashboard, fraud detection modules, transaction search, reports, and graphical analysis to help users monitor fraudulent activities efficiently.
 
 ---
 
-## 🧠 Machine Learning Algorithms
+## ✨ Key Features
 
-### Cashier Fraud Detection
-- Isolation Forest
-- Unsupervised Anomaly Detection
-
-### Online Fraud Detection
-- Random Forest Classifier
-- Supervised Classification
+- 💳 Cashier Fraud Detection
+- 🌐 Online Transaction Fraud Detection
+- 📊 Interactive Dashboard
+- 📈 Fraud Summary Graphs
+- 🔍 Search Transactions by ID
+- 📑 Detailed Reports
+- 🤖 Machine Learning-Based Detection
+- 🖥️ Modern Desktop Interface (CustomTkinter)
 
 ---
 
-## 🖥️ Technologies Used
+# 🤖 Machine Learning Models
+
+| Module | Algorithm |
+|---------|-----------|
+| Cashier Fraud Detection | Isolation Forest |
+| Online Fraud Detection | Random Forest |
+
+---
+
+# 🛠️ Technologies Used
 
 - Python
 - CustomTkinter
 - Pandas
 - NumPy
-- Scikit-Learn
 - Matplotlib
-- Pickle
-- Git & GitHub
+- Scikit-learn
+- Pillow
 
 ---
 
-## 📂 Project Structure
+# 📸 Application Screenshots
 
-```
+## 🏠 Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+---
+
+## 💳 Cashier Fraud Detection
+
+![Cashier Detection](assets/cashier_detection.png)
+
+---
+
+## 🌐 Online Fraud Detection
+
+![Online Detection](assets/online_detection.png)
+
+---
+
+## 📑 Reports
+
+![Reports](assets/reports.png)
+
+---
+
+## 🔍 Transaction Search
+
+![Search](assets/search.png)
+
+---
+
+## 📈 Graph Analytics
+
+![Graphs](assets/graphs.png)
+
+---
+
+## ℹ️ About
+
+![About](assets/about.png)
+
+---
+
+# 📂 Project Structure
+
+```text
 Cashier-Shield-AI/
 │
-├── app.py
-├── cashier_model.py
-├── online_model.py
+├── assets/
+│   ├── dashboard.png
+│   ├── cashier_detection.png
+│   ├── online_detection.png
+│   ├── reports.png
+│   ├── search.png
+│   ├── graphs.png
+│   └── about.png
+│
 ├── controllers/
-├── ui/
 ├── datasets/
 ├── graphs/
 ├── models/
 ├── results/
-├── assets/
+├── ui/
+│   └── pages/
+│
+├── app.py
+├── cashier_model.py
+├── online_model.py
+├── utils.py
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
-Clone the repository
+## 1. Clone the repository
 
 ```bash
-git clone https://github.com/Shree04-08/Cashier-Shield-AI.git
+git clone https://github.com/YOUR_GITHUB_USERNAME/Cashier-Shield-AI.git
 ```
 
-Move into the project
+## 2. Navigate to the project
 
 ```bash
 cd Cashier-Shield-AI
 ```
 
-Install dependencies
+## 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+source venv/bin/activate
+```
+
+## 4. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application
+## 5. Run the application
 
 ```bash
 python app.py
@@ -100,82 +169,33 @@ python app.py
 
 ---
 
-## 📊 Modules
+# 🎯 Future Improvements
 
-### Dashboard
-Displays:
-- Total Transactions
-- Fraud Transactions
-- Genuine Transactions
-- Active Detection Model
-- Activity Console
-- Fraud Summary Graph
-
-### Cashier Fraud Detection
-- Isolation Forest
-- Detects suspicious cashier behaviour
-- Generates reports
-- Displays fraud statistics
-
-### Online Fraud Detection
-- Random Forest
-- Detects fraudulent online transactions
-- Prediction reports
-- Graph generation
-
-### Reports
-- Cashier Report
-- Online Report
-- Transaction Summary
-
-### Search
-- Search transactions using Transaction ID
-
-### Graphs
-- Fraud Summary Graph
-- Detection Statistics
-
----
-
-## 📸 Screenshots
-
-### Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
----
-
-### Cashier Fraud Detection
-
-![Cashier Detection](screenshots/cashier_detection.png)
-
----
-
-### Online Fraud Detection
-
-![Online Detection](screenshots/online_detection.png)
-
----
-
-## 📈 Future Improvements
-
-- PDF Report Generation
 - Database Integration
-- Login Authentication
-- Live Transaction Monitoring
 - Cloud Deployment
-- Explainable AI
+- Live Transaction Monitoring
+- Explainable AI (XAI)
+- PDF & Excel Report Export
+- Email Notifications
+- Multi-Branch Fraud Monitoring
 
 ---
 
-## 👩‍💻 Developer
+# 👩‍💻 Developer
 
 **Shubhashree Bhat**
 
-B.E. Artificial Intelligence & Data Science
+Bachelor of Engineering  
+Artificial Intelligence & Data Science
+
+S.G. Balekundri Institute of Technology
 
 ---
 
-## 📜 License
+# 📄 License
 
-This project is developed for educational and academic purposes.
+This project is intended for educational and portfolio purposes.
+
+---
+
+⭐ **If you found this project useful or interesting, consider giving it a star on GitHub!**

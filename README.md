@@ -183,7 +183,7 @@ python app.py
 
 # 👩‍💻 Developer
 
-**Shubhashree Bhat**
+**Swati Patil**
 
 Bachelor of Engineering  
 Artificial Intelligence & Data Science
